@@ -10,6 +10,10 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 /** Material */
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+/** Services */
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -18,13 +22,16 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     NotFoundComponent,
   ],
   imports: [
+    HttpClientModule,
     MatToolbarModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     NotFoundComponent,
-  ] 
+  ],
+  providers: []
 })
 export class CoreModule { }

@@ -1,14 +1,13 @@
-<header class="marvel-header">
-  <mat-toolbar color="primary">
-    <button mat-icon-button class="marvel-heaader--menu" aria-label="">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>Marvel Heroes</span>
+<header class="marvel-header mat-elevation-z5">
+  <mat-toolbar>
+    <a class="marvel-header--link" mat-button [routerLink]="'/'">
+      <img class="marvel-header--logo" src="../../../../assets/img/marvel-logo.svg" />
+    </a>
     <span class="marvel-header--spacer"></span>
-    <button mat-icon-button class="marvel-header--icon-favorite" aria-label="">
+    <button mat-icon-button class="marvel-header--bookmark" aria-label="Bookmark us">
       <mat-icon>star</mat-icon>
     </button>
-    <button mat-icon-button class="marvel-header--icon-share" aria-label="">
+    <button mat-icon-button class="marvel-header--share" aria-label="Share">
       <mat-icon>share</mat-icon>
     </button>
   </mat-toolbar>

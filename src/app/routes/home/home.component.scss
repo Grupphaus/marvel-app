@@ -1,0 +1,12 @@
+.marvel-home {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 48px;
+
+  &__card {
+    margin: 16px;
+    width: 256px;
+  }
+}

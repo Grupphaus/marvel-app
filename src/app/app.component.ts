@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
     <!-- Header -->
     <app-header></app-header>
     <!-- Routes render -->
-    <router-outlet></router-outlet>
+    <section class="marvel-navigation-container">
+      <router-outlet></router-outlet>
+    </section>
     <!-- Footer -->
     <app-footer></app-footer>
   `,

@@ -1,5 +1,14 @@
 .marvel-header {
+  &--link {
+    padding: 0;
+    width: 140px;
+  }
+
   &--spacer {
     flex: 1 1 auto;
+  }
+
+  mat-toolbar {
+    background-color: #ed1d24;
   }
 }
