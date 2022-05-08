@@ -1,17 +1,6 @@
 <div class="marvel-home">
-  <mat-card *ngFor="let character of characters$ | async" class="marvel-home__card">
-    <mat-card-header>
-      <mat-card-title>{{character.name}}</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content></mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="primary">
-        <mat-icon>favorite</mat-icon>
-      </button>
-      <button mat-raised-button color="accent">
-        <mat-icon>menu</mat-icon>
-      </button>
-    </mat-card-actions>
-  </mat-card>
+
+  <div *ngFor="let character of characters$ | async">
+    <app-character-card [character]="character"></app-character-card>
+  </div>
 </div>

@@ -1,0 +1,15 @@
+<mat-card class="marvel-character-card">
+    <mat-card-header>
+      <mat-card-title>{{this.character.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{this.character.imageURL}}" alt="Photo of a Shiba Inu">
+    <mat-card-content></mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="{{this.character.isFavorite ? 'primary' : 'secondary'}}" (click)="this.toggleFavorite(this.character.id)">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-raised-button color="accent">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>

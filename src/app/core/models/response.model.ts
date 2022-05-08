@@ -1,3 +1,5 @@
+import { CharacterCard } from "./card";
+
 export interface CharactersResponse {
   code: number;
   status: string;
@@ -13,7 +15,7 @@ interface Data {
   limit: number;
   total: number;
   count: number;
-  results: CharacterData[];
+  results: CharacterCard[]|undefined;
 }
 
 export interface CharacterData {

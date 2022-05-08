@@ -1,5 +1,7 @@
 /** Modules */
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 
 /** Components  */
@@ -11,8 +13,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 /** Services */
-import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { StorageService } from './services/storage.service';
 
 
 @NgModule({
@@ -32,6 +33,6 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     NotFoundComponent,
   ],
-  providers: []
+  providers: [StorageService]
 })
 export class CoreModule { }

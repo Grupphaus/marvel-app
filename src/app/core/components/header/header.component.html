@@ -6,6 +6,7 @@
     <span class="marvel-header--spacer"></span>
     <button mat-icon-button class="marvel-header--bookmark" aria-label="Bookmark us">
       <mat-icon>star</mat-icon>
+      <span *ngIf="this.favorites > 0">{{this.favorites}}</span>
     </button>
     <button mat-icon-button class="marvel-header--share" aria-label="Share">
       <mat-icon>share</mat-icon>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from '../../services/storage.service';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  favorites = 0;
+  
+  constructor(private _storage: StorageService) {
+    this._storage.eventCallback$.subscribe(length => this.favorites = length);
+  }
 
   ngOnInit(): void {
   }
