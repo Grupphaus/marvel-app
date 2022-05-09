@@ -9,6 +9,10 @@ export class CharacterCard {
   ) {}
 
   get imageURL() {
-    return `${this.thumbnail.path}.${this.thumbnail.extension}`
+    if (this.thumbnail.path.includes('image_not_available')) {
+      return '/assets/img/marvel-shield.jpg';
+    } else {
+      return `${this.thumbnail.path}.${this.thumbnail.extension}`;
+    }
   }
 }

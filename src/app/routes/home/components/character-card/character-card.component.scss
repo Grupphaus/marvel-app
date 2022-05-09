@@ -1,4 +1,17 @@
 .marvel-character-card {
   margin: 16px;
   max-width: 208px;
+
+  &--title {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mat-card-image {
+    height: 208px;
+    object-fit: cover;
+    width: 208px;
+  }
 }
