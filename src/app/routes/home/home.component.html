@@ -1,4 +1,5 @@
 <section class="marvel-home">
+  <mat-spinner *ngIf="!this.hasApiLoaded" mode="indeterminate"></mat-spinner>
   <cdk-virtual-scroll-viewport itemSize="15" minBufferPx="45" maxBufferPx="400" class="marvel-home--cards-container">
     <div *cdkVirtualFor="let character of characters$ | async">
       <app-character-card [character]="character"></app-character-card>

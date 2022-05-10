@@ -9,6 +9,9 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
+/** Components */
 import { PaginatorComponent } from './components/paginator/paginator/paginator.component';
 
 
@@ -21,6 +24,7 @@ import { PaginatorComponent } from './components/paginator/paginator/paginator.c
     MatIconModule,
     MatButtonModule,
     MatPaginatorModule,
+    MatProgressSpinnerModule,
   ],
   exports: [
     PaginatorComponent,
@@ -31,6 +35,7 @@ import { PaginatorComponent } from './components/paginator/paginator/paginator.c
     MatIconModule,
     MatButtonModule,
     MatPaginatorModule,
+    MatProgressSpinnerModule
   ]
 })
 export class SharedModule { }

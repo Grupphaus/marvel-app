@@ -9,10 +9,17 @@
 
   &--cards-container {
     height: 75vh;
+    margin-right: -24px;
     width: 100%;
   }
   
   app-paginator {
     margin-top: 24px;
+  }
+
+  mat-spinner {
+    margin: 40vh auto 0;
+    position: absolute;
+    top: 0;
   }
 }
