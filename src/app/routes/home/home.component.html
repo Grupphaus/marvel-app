@@ -1,6 +1,8 @@
-<div class="marvel-home">
-
-  <div *ngFor="let character of characters$ | async">
-    <app-character-card [character]="character"></app-character-card>
-  </div>
-</div>
+<section class="marvel-home">
+  <cdk-virtual-scroll-viewport itemSize="15" minBufferPx="45" maxBufferPx="400" class="marvel-home--cards-container">
+    <div *cdkVirtualFor="let character of characters$ | async">
+      <app-character-card [character]="character"></app-character-card>
+    </div>
+  </cdk-virtual-scroll-viewport>
+  <app-paginator [total]="paginationTotal$" (paginationOptions)="handlePagination($event)"></app-paginator>
+</section>

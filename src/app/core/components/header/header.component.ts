@@ -8,13 +8,14 @@ import { StorageService } from '../../services/storage.service';
 })
 export class HeaderComponent implements OnInit {
 
-  favorites = 0;
+  public favorites = 0;
   
   constructor(private _storage: StorageService) {
-    this._storage.eventCallback$.subscribe(length => this.favorites = length);
+    this._storage.favoriteCount$.subscribe(length => this.favorites = length);
   }
 
   ngOnInit(): void {
+    this._storage.emitTotal();
   }
 
 }

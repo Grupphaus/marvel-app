@@ -8,6 +8,11 @@
     flex: 1 1 auto;
   }
 
+  &--count {
+    font-size: 20px;
+    margin-top: 4px;
+  }
+
   mat-toolbar {
     background-color: #ed1d24;
   }

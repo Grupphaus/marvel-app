@@ -13,9 +13,7 @@ export class CharacterCardComponent implements OnInit {
 
   constructor(private _storage: StorageService) { }
 
-  ngOnInit(): void {
-    this._storage.emitTotal();
-  }
+  ngOnInit(): void { }
 
   toggleFavorite(id: number) {
     let favorites = this._storage.getFavorites();

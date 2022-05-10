@@ -6,14 +6,14 @@ import { Subject } from 'rxjs';
 })
 export class StorageService {
 
-  public eventCallback$ = new Subject<number>();
+  public favoriteCount$ = new Subject<number>();
 
   constructor() {}
 
   public emitTotal() {
-    const listLength = this.getFavorites()?.length;
+    const listLength = this.getFavorites().length;
     
-    this.eventCallback$.next(listLength);
+    this.favoriteCount$.next(listLength);
   }
 
   public setItem(list: string) {

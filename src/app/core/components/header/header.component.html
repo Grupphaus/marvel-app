@@ -1,15 +1,12 @@
-<header class="marvel-header mat-elevation-z5">
+<header class="marvel-header mat-elevation-z3">
   <mat-toolbar>
     <a class="marvel-header--link" mat-button [routerLink]="'/'">
       <img class="marvel-header--logo" src="/assets/img/marvel-logo.svg" />
     </a>
     <span class="marvel-header--spacer"></span>
-    <button mat-icon-button class="marvel-header--bookmark" aria-label="Bookmark us">
+    <span class="marvel-header--count" *ngIf="this.favorites > 0">{{this.favorites}}</span>
+    <button mat-icon-button class="marvel-header--favorites" aria-label="View favorites only">
       <mat-icon>star</mat-icon>
-      <span *ngIf="this.favorites > 0">{{this.favorites}}</span>
-    </button>
-    <button mat-icon-button class="marvel-header--share" aria-label="Share">
-      <mat-icon>share</mat-icon>
     </button>
   </mat-toolbar>
 </header>

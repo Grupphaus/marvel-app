@@ -16,11 +16,11 @@ import { CharacterCardComponent } from './components/character-card/character-ca
 @NgModule({
   declarations: [
     HomeComponent,
-    CharacterCardComponent
+    CharacterCardComponent,
   ],
   imports: [
     MatCardModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [MarvelService]
 })
