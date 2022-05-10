@@ -2,10 +2,13 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   height: 100%;
   justify-content: center;
   padding: 0 48px;
+
+  app-search {
+    width: 50%;
+  }
 
   &--cards-container {
     height: 75vh;
@@ -14,11 +17,5 @@
   
   app-paginator {
     margin-top: 24px;
-  }
-
-  mat-spinner {
-    margin: 40vh auto 0;
-    position: absolute;
-    top: 0;
   }
 }

@@ -6,7 +6,6 @@ import { SharedModule } from '../shared/shared.module';
 
 /** Components  */
 import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 /** Material */
@@ -19,7 +18,6 @@ import { StorageService } from './services/storage.service';
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent,
     NotFoundComponent,
   ],
   imports: [
@@ -30,7 +28,6 @@ import { StorageService } from './services/storage.service';
   ],
   exports: [
     HeaderComponent,
-    FooterComponent,
     NotFoundComponent,
   ],
   providers: [StorageService]

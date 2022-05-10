@@ -1,0 +1,10 @@
+<form [formGroup]="searchForm">
+  <mat-form-field class="marvel-search" appearance="standard">
+    <mat-label color="secondary">S.H.I.E.L.D Database Search</mat-label>
+    <input matInput type="text" formControlName="search">
+    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
+      <mat-icon>close</mat-icon>
+    </button>
+    <mat-icon *ngIf="!value" matSuffix>search</mat-icon>
+  </mat-form-field>
+</form>
