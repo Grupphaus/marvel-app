@@ -1,7 +1,13 @@
 <section class="marvel-home">
-  <mat-spinner *ngIf="!this.hasApiLoaded" mode="indeterminate"></mat-spinner>
-  <cdk-virtual-scroll-viewport itemSize="15" minBufferPx="45" maxBufferPx="400" class="marvel-home--cards-container">
-    <div *cdkVirtualFor="let character of characters$ | async">
+  <mat-spinner *ngIf="!this.hasApiLoaded"
+      mode="indeterminate"
+      color="warn">
+  </mat-spinner>
+  <cdk-virtual-scroll-viewport class="marvel-home--cards-container"
+      itemSize="15"
+      minBufferPx="45"
+      maxBufferPx="400">
+    <div *cdkVirtualFor="let character of characters$ | async" @fadeIn>
       <app-character-card [character]="character"></app-character-card>
     </div>
   </cdk-virtual-scroll-viewport>
