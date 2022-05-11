@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { debounceTime, Subject, switchMap } from 'rxjs';
+import { debounceTime, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-search',
@@ -9,17 +9,23 @@ import { debounceTime, Subject, switchMap } from 'rxjs';
 })
 export class SearchComponent implements OnInit {
 
-  @Output() value = '';
-  @Output() test = new EventEmitter<string>();
-  searchForm!: FormGroup;
-  searchInput!: FormControl;
+  public inputString = new Observable<string>();
+  @Output() query = new EventEmitter<string>();
+  public searchForm!: FormGroup;
+  public searchInput!: FormControl;
 
   constructor(private _formBuilder: FormBuilder) {
-    this.searchInput = new FormControl();
-    this.searchForm = this._formBuilder.group({search: this.searchInput});
+    this.searchInput = new FormControl('', { initialValueIsDefault: true });
+    this.searchForm = this._formBuilder.group({ search: this.searchInput });
+    this.searchInput.valueChanges.pipe(
+      debounceTime(400),
+      (event) => this.inputString = event);
+    this.inputString.subscribe(input => this.query.emit(input));
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
+  clear() {
+    this.searchForm.reset();
+  }
 }

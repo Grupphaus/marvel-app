@@ -2,9 +2,13 @@
   <mat-form-field class="marvel-search" appearance="standard">
     <mat-label color="secondary">S.H.I.E.L.D Database Search</mat-label>
     <input matInput type="text" formControlName="search">
-    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
+    <button *ngIf="searchInput.value"
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="clear()">
       <mat-icon>close</mat-icon>
     </button>
-    <mat-icon *ngIf="!value" matSuffix>search</mat-icon>
+    <mat-icon *ngIf="!searchInput.value" matSuffix>search</mat-icon>
   </mat-form-field>
 </form>

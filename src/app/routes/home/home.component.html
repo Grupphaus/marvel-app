@@ -1,5 +1,5 @@
 <section class="marvel-home">
-  <app-search></app-search>
+  <app-search (query)="handleSearch($event)"></app-search>
   <cdk-virtual-scroll-viewport class="marvel-home--cards-container"
       itemSize="10"
       appendOnly>
@@ -7,6 +7,9 @@
       <app-character-card [character]="character"></app-character-card>
     </ng-container>
   </cdk-virtual-scroll-viewport>
-  <app-paginator [total]="paginationTotal$" (paginationOptions)="handlePagination($event)"></app-paginator>
+  <app-paginator [isDisabled]="paginationTotal <= this.options.limit"
+      [total]="paginationTotal"
+      (paginationOptions)="handlePagination($event)">
+  </app-paginator>
 </section>
 <mat-progress-bar *ngIf="!this.hasApiLoaded" mode="query" color="warn"></mat-progress-bar>

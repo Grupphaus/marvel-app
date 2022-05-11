@@ -10,7 +10,7 @@ import { MarvelService } from 'src/app/core/services/marvel.service';
 })
 export class HomeComponent implements OnInit {
   public characters$!: Observable<CharacterCard[] | undefined>;
-  public paginationTotal$ = 0;
+  public paginationTotal = 0;
   public hasApiLoaded = false;
   public options: QueryOptions = {
     limit: 50,
@@ -18,22 +18,28 @@ export class HomeComponent implements OnInit {
   }
 
   constructor(private _marvelService: MarvelService) {
-    this._marvelService.totalResults$.subscribe(total => this.paginationTotal$ = total);
+    this._marvelService.totalResults$.subscribe(total => this.paginationTotal = total);
     this.getCharacters(this.options);
   }
 
   ngOnInit(): void { }
 
+  handleSearch(term: string) {
+    term === '' ? delete this.options.nameStartsWith : this.options.nameStartsWith = term;
+    this.getCharacters(this.options);
+  }
+
   handlePagination(options: QueryOptions) {
     this.hasApiLoaded = false;
-    this.options = options;
-    this.getCharacters(options);
+    this.options = Object.assign(this.options, options);
+    this.getCharacters(this.options);
   }
 
   getCharacters(options: QueryOptions) {
     this.characters$ = this._marvelService.getAllCharacters(options);
     this.characters$.subscribe({
-      next: () => this.hasApiLoaded = true
-    });
+      complete: () => this.hasApiLoaded = true,
+      error: (err) => console.log(err) // TODO: Error handling.
+    }).unsubscribe;
   }
 }

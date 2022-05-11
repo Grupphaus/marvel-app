@@ -9,6 +9,7 @@ import { QueryOptions } from 'src/app/core/models';
 export class PaginatorComponent implements OnInit {
 
   @Input() total = 0;
+  @Input() isDisabled = false;
   @Output() perPage = 50;
   @Output() paginationOptions = new EventEmitter<QueryOptions>();
 

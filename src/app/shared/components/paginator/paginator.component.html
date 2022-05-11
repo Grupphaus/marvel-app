@@ -3,6 +3,7 @@
     [pageSize]="perPage"
     [pageSizeOptions]="[10, 25, 50, 100]"
     (page)="handlePagination($event)"
+    [disabled]="isDisabled"
     showFirstLastButtons="true"
     aria-label="Select page">
 </mat-paginator>
