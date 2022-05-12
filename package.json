@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "config": "node src/set-env.ts",
+    "config": "ts-node src/set-env.ts",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -27,6 +27,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular-builders/custom-webpack": "^13.1.0",
     "@angular-devkit/build-angular": "~13.3.5",
     "@angular/cli": "~13.3.5",
     "@angular/compiler-cli": "~13.3.0",
