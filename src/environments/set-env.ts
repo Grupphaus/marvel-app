@@ -2,12 +2,7 @@ const setEnv = () => {
   const fs = require('fs');
   const writeFile = fs.writeFile;
   const targetPath = './src/environments/environment.prod.ts';
-  const colors = require('colors');
   const appVersion = require('../../package.json').version;
-
-  require('dotenv').config({
-    path: 'src/environments/.env'
-  });
 
   const envConfigFile = `export const environment = {
         apiUrl: 'https://gateway.marvel.com:443/v1/public',
@@ -17,12 +12,12 @@ const setEnv = () => {
     };
   `;
 
-  writeFile(targetPath, envConfigFile, (err: Error) => {
+  writeFile(targetPath, envConfigFile, (err) => {
     if (err) {
       console.error(err);
       throw err;
     } else {
-      console.log(colors.magenta(`Angular environment.ts file generated correctly at ${targetPath} \n`));
+      console.log(`Angular environment.ts file generated correctly at ${targetPath} \n`);
     }
   });
 };
