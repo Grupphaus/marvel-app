@@ -6,7 +6,7 @@ const setEnv = () => {
 
   const envConfigFile = `export const environment = {
         apiUrl: 'https://gateway.marvel.com:443/v1/public',
-        key: '${process.env.API_KEY}',
+        key: '${process.env['API_KEY']}',
         appVersion: '${appVersion}',
         production: true,
     };
