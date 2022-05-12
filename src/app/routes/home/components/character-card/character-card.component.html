@@ -2,18 +2,23 @@
   <mat-card-header>
     <mat-card-title>
       <p class="marvel-character-card--title">
-        {{this.character.name}}
+        {{character.name}}
       </p>
   </mat-card-title>
   </mat-card-header>
-  <img mat-card-image src="{{this.character.imageURL}}" alt="">
+  <img mat-card-image src="{{character.imageURL}}" alt="">
   <mat-card-content></mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="{{this.character.isFavorite ? 'primary' : 'secondary'}}" (click)="this.toggleFavorite(this.character.id)">
-      <mat-icon>favorite</mat-icon>
+    <button mat-raised-button
+        color="{{character.isFavorite ? 'primary' : 'secondary'}}"
+        (click)="toggleFavorite(character.id)"
+        aria-label="Toggle favorite status">
+      <mat-icon class="marvel-character-card--favorite">star</mat-icon>
     </button>
-    <button mat-raised-button color="accent">
-      <mat-icon>menu</mat-icon>
+    <button [routerLink]="['character', character.id]"
+      mat-raised-button color="accent"
+      aria_label="Character page">
+      <mat-icon>view_list</mat-icon>
     </button>
   </mat-card-actions>
 </mat-card>

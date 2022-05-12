@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 
@@ -16,6 +17,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 /** Components */
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import { SearchComponent } from './components/search/search.component';
+import { MatCardModule } from '@angular/material/card';
+
 
 
 @NgModule({
@@ -39,7 +42,9 @@ import { SearchComponent } from './components/search/search.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule,
     ScrollingModule,
+    MatCardModule,
     MatIconModule,
     MatInputModule,
     MatButtonModule,

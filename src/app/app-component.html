@@ -1,4 +1,4 @@
 <app-header></app-header>
-<section class="marvel-navigation-container">
-  <router-outlet></router-outlet>
-</section>
+<div [@fadeAnimation]="setRoute(outlet)" class="marvel-navigation-container">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>

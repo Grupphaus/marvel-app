@@ -23,14 +23,14 @@ export class StorageService {
   }
 
   public saveFavorite(id: number) {
-    let updatedFavorites = this.getFavorites();
+    const updatedFavorites = this.getFavorites();
     updatedFavorites.push(id);
 
     this.setItem(JSON.stringify(updatedFavorites));
   }
 
   public removeFavorite(id: number) {    
-    let updatedFavorites = this.getFavorites();
+    const updatedFavorites = this.getFavorites();
     updatedFavorites.splice(updatedFavorites.indexOf(id), 1);
 
     this.setItem(JSON.stringify(updatedFavorites));

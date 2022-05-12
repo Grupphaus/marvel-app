@@ -24,7 +24,6 @@ import { StorageService } from './services/storage.service';
     HttpClientModule,
     MatToolbarModule,
     SharedModule,
-    RouterModule
   ],
   exports: [
     HeaderComponent,

@@ -8,6 +8,7 @@ import { CoreModule } from './core/core.module';
 
 /** Feature Modules */
 import { HomeModule } from './routes/home/home.module';
+import { CharacterModule } from './routes/character/character.module';
 
 /** Components */
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     CoreModule,
     HomeModule,
+    CharacterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

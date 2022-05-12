@@ -1,6 +1,12 @@
+@import '../assets/css/vars/vars';
+
 .marvel-navigation-container {
   background: center / cover no-repeat url("./../assets/img/marvel-background-min.jpg");
   display: block;
-  height: calc(100% - 68px);
+  height: calc(100% - 60px);
   width: 100%;
+
+  @media #{$viewport-tablet} {
+    height: calc(100% - 68px);
+  }
 }

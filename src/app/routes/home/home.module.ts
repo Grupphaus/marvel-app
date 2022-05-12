@@ -5,9 +5,6 @@ import { SharedModule } from 'src/app/shared/shared.module';
 /** Components */
 import { HomeComponent } from './home.component';
 
-/** Material Components */
-import { MatCardModule } from '@angular/material/card';
-
 /** Services */
 import { MarvelService } from 'src/app/core/services/marvel.service';
 import { CharacterCardComponent } from './components/character-card/character-card.component';
@@ -19,7 +16,6 @@ import { CharacterCardComponent } from './components/character-card/character-ca
     CharacterCardComponent,
   ],
   imports: [
-    MatCardModule,
     SharedModule,
   ],
   providers: [MarvelService]

@@ -7,7 +7,17 @@ export interface CharactersResponse {
   attributionText: string;
   attributionHTML: string;
   etag: string;
-  data: Data;
+  data: Data
+}
+
+export interface SingleCharacterResponse {
+  code: number;
+  status: string;
+  copyright: string;
+  attributionText: string;
+  attributionHTML: string;
+  etag: string;
+  data: SingleData
 }
 
 interface Data {
@@ -15,7 +25,15 @@ interface Data {
   limit: number;
   total: number;
   count: number;
-  results: CharacterCard[]|undefined;
+  results: CharacterCard[];
+}
+
+interface SingleData {
+  offset: number;
+  limit: number;
+  total: number;
+  count: number;
+  results: CharacterData[];
 }
 
 export interface CharacterData {

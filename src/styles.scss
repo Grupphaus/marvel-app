@@ -10,8 +10,13 @@ main {
   height: 100%;
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  text-rendering: optimizeLegibility;
 }
 
 main {
@@ -25,6 +30,10 @@ main {
 
 .mat-card .mat-card-image {
   margin: 0 -16px -16px;
+}
+
+.mat-chip.mat-standard-chip.mat-chip-disabled {
+  opacity: .8;
 }
 
 .cdk-virtual-scroll-content-wrapper {
