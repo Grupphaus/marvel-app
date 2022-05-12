@@ -1,8 +1,8 @@
 const setEnv = () => {
   const fs = require('fs');
   const writeFile = fs.writeFile;
-  const targetPath = '/vercel/path0/src/environments/environment.prod.ts';
-  const appVersion = require('../../package.json').version;
+  const targetPath = 'src/environments/environment.prod.ts';
+  const appVersion = require('../package.json').version;
 
   const envConfigFile = `export const environment = {
         apiUrl: 'https://gateway.marvel.com:443/v1/public',

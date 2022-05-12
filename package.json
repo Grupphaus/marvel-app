@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "config": "node src/environments/set-env.ts",
+    "config": "node src/set-env.ts",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
