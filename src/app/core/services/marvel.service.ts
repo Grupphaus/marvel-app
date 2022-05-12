@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, map, Subject } from 'rxjs';
 import { CharactersResponse, QueryOptions, CharacterCard, CharacterData } from '../models';
 import { SingleCharacterResponse } from '../models/response.model';
-import { environment } from './../../../environments/environment.prod';
+import { environment } from './../../../environments/environment';
 import { StorageService } from './storage.service';
 
 @Injectable({
