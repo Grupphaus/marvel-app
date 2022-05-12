@@ -21,10 +21,7 @@
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
             "customWebpackConfig": {
-              "path": "./custom-webpack-config.js",
-              "mergeRules": {
-                "externals": "replace"
-              }
+              "path": "./custom-webpack-config.js"
             },
             "outputPath": "dist/marvel-heroes",
             "index": "src/index.html",
