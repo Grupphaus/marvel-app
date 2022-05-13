@@ -1,27 +1,59 @@
-# MarvelHeroes
+# Marvel Heroes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+Built with the [Marvel Comics API](https://developer.marvel.com/docs).
 
-## Development server
+Take-home assignment for **Media Monks BA**.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+I've picked Angular as my framework of choice due to its advantages for building Single Page Applications and working with long-running streams of events.  It provides a fair amount of out-of-the-box solutions such as routing, two-way data binding, code-splitting, lazy-loading and so on.
+The goal was to create an app-like experience that features a simple and friendly UI. This was my first time working with this framework in a while (and my first time ever with Angular Material fwiw) so I wanted to make sure to follow best practices by creating a scalable and robust project structure, even if it might seem to be a bit of an overkill for a small-sized application like this.
+It's a little far from what I would've liked to accomplish but I'm pretty happy with the results, specially considering that I haven't used any third-party libraries outside of the UI components.
 
-## Code scaffolding
+Thanks for reading!
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Links
 
-## Build
+- [Live View](https://marvel-app-khaki.vercel.app/ "Live View")
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [API](https://developer.marvel.com/docs "API")
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Built With
 
-## Running end-to-end tests
+- [Angular](https://angular.io)
+- [Angular CLI](https://github.com/angular/angular-cli)
+- [Angular Material](https://material.angular.io/)
+- [Node](https://nodejs.org/en/)
+- [NPM](https://www.npmjs.com/)
+- [Webpack](https://webpack.js.org/guides/getting-started/)
+- [RxJS](https://rxjs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- Life-threatening amounts of caffeine
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## TO-DOs due to time constraints
 
-## Further help
+- [ ] HTTP response caching strategy - shareReplay(), take()
+- [ ] Splash screen loader for better UX
+- [ ] Refactor conditional rendering in order to avoid FOUCs
+- [ ] Add more transitions and animations for a richer SPA experience
+- [ ] Filter character list by "Favorite" status
+- [ ] Filter search by adding/removing categories (include comics, stories and series) - implement forkJoin to make parallel calls
+- [ ] Show placeholder content in between API calls (home screen)
+- [ ] Componentize the Character module a bit further
+- [ ] Get rid of unused code and clean any remaining smells/hacks/inconsistencies
+- [ ] Improve a11y and keyboard navigation according to WCAG AA standards
+- [ ] Implement BEM correctly (don't judge me)
+- [ ] Improve performance on mobile
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Author
+
+**Federico Pellegrini**
+
+- [Profile](https://github.com/Grupphaus "Federico Pellegrini")
+- [Email](mailto:fellegrini@gmail.com?subject=Hi "Hey!")
+- [LinkedIn](https://linkedin.com/in/fellegrini "LinkedIn Profile")
+
+## 🤝 Support
+
+Contributions, issues, and feature requests are welcome!
+
+Give a ⭐️ if you like this project!
