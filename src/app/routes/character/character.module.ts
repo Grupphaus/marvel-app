@@ -15,7 +15,6 @@ import { CharacterComponent } from './character.component';
     CharacterComponent,
   ],
   imports: [
-    CoreModule,
     SharedModule,
     MatChipsModule,
   ]

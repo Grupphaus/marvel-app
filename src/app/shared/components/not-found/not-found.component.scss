@@ -1,0 +1,42 @@
+@import '../../../../assets/css/vars/vars';
+
+.marvel-not-found {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 65vh;
+  position: relative;
+
+  &--image,
+  &--image-bg {
+    height: 500px;
+    margin-top: 24px;
+
+    @media #{$viewport-mobile-only} {
+      height: 375px;
+      margin-top: 16px;
+    }
+  }
+
+  &--image {
+    z-index: 2;
+  }
+
+  &--image-bg {
+    filter: blur(8px);
+    left: 0;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &--message {
+    color: #fff;
+    font-family: 'Marvel', Roboto, sans-serif;
+    font-size: 48px;
+
+    @media #{$viewport-desktop} {
+      font-size: 56px
+    }
+  }
+}

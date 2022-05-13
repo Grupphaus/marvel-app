@@ -6,6 +6,7 @@
     <ng-container *cdkVirtualFor="let character of characters$ | async">
       <app-character-card [character]="character"></app-character-card>
     </ng-container>
+    <app-not-found *ngIf="hasApiLoaded && paginationTotal === 0"></app-not-found>
   </cdk-virtual-scroll-viewport>
   <app-paginator [isDisabled]="paginationTotal <= this.options.limit"
       [total]="paginationTotal"

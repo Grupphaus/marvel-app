@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NotFoundComponent } from './core/components/not-found/not-found.component';
 import { CharacterComponent } from './routes/character/character.component';
 import { HomeComponent } from './routes/home/home.component';
 
@@ -16,7 +15,8 @@ const routes: Routes = [
     loadChildren: () => import('./routes/character/character.module').then(m => m.CharacterModule),
   },
   {
-    path: '**', component: NotFoundComponent
+    path: '**', component: HomeComponent,
+    loadChildren: () => import('./routes/home/home.module').then(m => m.HomeModule),
   },
 ];
 

@@ -18,11 +18,13 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import { SearchComponent } from './components/search/search.component';
 import { MatCardModule } from '@angular/material/card';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 
 @NgModule({
   declarations: [
+    NotFoundComponent,
     PaginatorComponent,
     SearchComponent,
   ],
@@ -37,6 +39,7 @@ import { MatCardModule } from '@angular/material/card';
     ReactiveFormsModule,
   ],
   exports: [
+    NotFoundComponent,
     PaginatorComponent,
     SearchComponent,
     CommonModule,
