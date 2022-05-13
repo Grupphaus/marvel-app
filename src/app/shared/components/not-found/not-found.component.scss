@@ -8,13 +8,17 @@
   min-height: 65vh;
   position: relative;
 
+  @media #{$viewport-mobile-only} {
+    min-height: 55vh;
+  }
+
   &--image,
   &--image-bg {
-    height: 500px;
-    margin-top: 24px;
+    height: 55vh;
+    margin-top: 36px;
 
     @media #{$viewport-mobile-only} {
-      height: 375px;
+      height: 330px;
       margin-top: 16px;
     }
   }
