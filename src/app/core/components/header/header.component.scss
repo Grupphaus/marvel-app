@@ -1,7 +1,15 @@
+@import '../../../../assets/css/vars/vars';
+
 .marvel-header {
   &--link {
     padding: 0;
     width: 140px;
+  }
+
+  &--logo {
+    @media #{$viewport-tablet} {
+      height: 56px;
+    }
   }
 
   &--spacer {
@@ -11,9 +19,19 @@
   &--count {
     font-size: 20px;
     margin-top: 4px;
+
+    @media #{$viewport-mobile-only} {
+      font-size: 16px;
+      margin-right: -4px;
+    }
   }
 
   mat-toolbar {
     background-color: #ed1d24;
+    padding: 0;
+
+    @media #{$viewport-tablet} {
+      padding: 0 16px;
+    }
   }
 }

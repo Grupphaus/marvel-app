@@ -39,7 +39,6 @@ export class HomeComponent implements OnInit {
     this.characters$ = this._marvelService.getAllCharacters(options);
     this.characters$.subscribe({
       complete: () => this.hasApiLoaded = true,
-      error: (err) => console.log(err) // TODO: Error handling.
     }).unsubscribe;
   }
 }
